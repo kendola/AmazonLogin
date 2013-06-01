@@ -1,0 +1,31 @@
+<?php
+/**
+ * Kendola Login With Amazon for Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category   Kendola
+ * @package    Kendola_AmazonLogin
+ * @author     Oliver Treck, kendola - easy eCommerce <o.treck@kendola.de>
+ * @copyright  Copyright (c) 2013 kendola - easy eCommerce (http://www.kendola.de/)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+?>
+<div class="col2-set">
+    <div class="col-1"></div>
+    <div class="col-2<?php echo (1!=@$this->noclass)?' account-login':''; ?>">
+        <div class="buttons-set">
+            <strong class="f-left" style="line-height: 32px;"><?php echo $this->__('OR'); ?> </strong>
+            <button id="LoginWithAmazon" style="border:0;background-color:transparent;cursor:pointer;">
+              <img border="0" href="#" alt="Login with Amazon"
+                src="https://images-na.ssl-images-amazon.com/images/G/01/lwa/btnLWA_gold_156x32.png"
+                width="156" height="32" />
+            </button>
+        </div>
+    </div>
+</div>

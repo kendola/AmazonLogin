@@ -1,0 +1,51 @@
+<?php
+/**
+ * Kendola Login With Amazon for Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category   Kendola
+ * @package    Kendola_AmazonLogin
+ * @author     Oliver Treck, kendola - easy eCommerce <o.treck@kendola.de>
+ * @copyright  Copyright (c) 2013 kendola - easy eCommerce (http://www.kendola.de/)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+?>
+<div id="amazon-root"></div>
+<script type="text/javascript">
+/*<![CDATA[*/
+window.onAmazonLoginReady = function() {
+    amazon.Login.setClientId('<?php echo $this->getClientId(); ?>');
+};
+(function(d) {
+    var a = d.createElement('script'); a.type = 'text/javascript';
+    a.async = true; a.id = 'amazon-login-sdk';
+    a.src = 'https://api-cdn.amazon.com/sdk/login1.js';
+    d.getElementById('amazon-root').appendChild(a);
+})(document);
+
+function LoginWithAmazon() {
+    options = { scope : 'profile postal_code', response_type: 'token' };
+    amazon.Login.authorize(options, function(response) {
+        if ( response.error ) {
+            alert('oauth error ' + response.error);
+            return;
+        }
+        document.location.href="<?php echo $this->getUrl('amazonlogin/customer/login')?>?referer=<?php echo Mage::helper('core')->urlEncode($this->helper('core/url')->getCurrentUrl())?>&token=" + response.access_token;
+    });
+}
+
+var button = document.getElementById('LoginWithAmazon');
+if(button!==undefined && button!==null) {
+    button.onclick = function() {
+        LoginWithAmazon();
+        return false;
+    };
+}
+/*]]>*/
+</script>
