@@ -1,41 +1,47 @@
 <?xml version="1.0"?>
 <!--
-/**
- * Kendola Login With Amazon for Magento
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Open Software License (OSL 3.0)
- * that is bundled with this package in the file LICENSE.txt.
- * It is also available through the world-wide-web at this URL:
- * http://opensource.org/licenses/osl-3.0.php
- *
- * @category   Kendola
- * @package    Kendola_AmazonLogin
- * @author     Oliver Treck, kendola - easy eCommerce <o.treck@kendola.de>
- * @copyright  Copyright (c) 2013 kendola - easy eCommerce (http://www.kendola.de/)
- * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
- */
--->
+  Kendola Login With Amazon for Magento
+
+  NOTICE OF LICENSE
+
+  This source file is subject to the Open Software License (OSL 3.0)
+  that is bundled with this package in the file LICENSE.txt.
+  It is also available through the world-wide-web at this URL:
+  http://opensource.org/licenses/osl-3.0.php
+
+  @category   Kendola
+  @package    Kendola_AmazonLogin
+  @author     Oliver Treck, kendola - easy eCommerce <o.treck@kendola.de>
+  @copyright  Copyright (c) 2017 kendola - easy eCommerce (http://www.kendola.de/)
+  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+  -->
 <layout version="0.1.0">
     <customer_account_login translate="label">
+        <block type="core/template" name="amazonlogin.login.button" template="amazonlogin/button.phtml" after="customer_form_login"/>
+        <block type="amazonlogin/default" name="amazonlogin.script" template="amazonlogin/script.phtml"/>
         <reference name="content">
-            <block type="core/template" name="amazonlogin.login.button" template="amazonlogin/button.phtml"
-                   after="customer_form_login" ifconfig="amazonlogin/settings/enabled"/>
+            <action method="append" ifconfig="amazonlogin/settings/enabled">
+                <block>amazonlogin.login.button</block>
+            </action>
         </reference>
         <reference name="before_body_end">
-            <block type="amazonlogin/default" name="amazonlogin.script" template="amazonlogin/script.phtml" ifconfig="amazonlogin/settings/enabled" />
+            <action method="append" ifconfig="amazonlogin/settings/enabled">
+                <block>amazonlogin.script</block>
+            </action>
         </reference>
     </customer_account_login>
 
     <checkout_onepage_index translate="label">
+        <block type="amazonlogin/default" name="amazonlogin.script" template="amazonlogin/script.phtml"/>
         <reference name="checkout.onepage.login">
             <action method="setTemplate" ifconfig="amazonlogin/settings/enabled">
                 <template>amazonlogin/checkout_login.phtml</template>
             </action>
         </reference>
         <reference name="before_body_end">
-            <block type="amazonlogin/default" name="amazonlogin.script" template="amazonlogin/script.phtml" ifconfig="amazonlogin/settings/enabled" />
+            <action method="append" ifconfig="amazonlogin/settings/enabled">
+                <block>amazonlogin.script</block>
+            </action>
         </reference>
     </checkout_onepage_index>
 </layout>

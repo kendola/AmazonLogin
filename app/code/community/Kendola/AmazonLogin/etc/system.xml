@@ -1,22 +1,20 @@
 <?xml version="1.0"?>
 <!--
-/**
- * Kendola Login With Amazon for Magento
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Open Software License (OSL 3.0)
- * that is bundled with this package in the file LICENSE.txt.
- * It is also available through the world-wide-web at this URL:
- * http://opensource.org/licenses/osl-3.0.php
- *
- * @category   Kendola
- * @package    Kendola_AmazonLogin
- * @author     Oliver Treck, kendola - easy eCommerce <o.treck@kendola.de>
- * @copyright  Copyright (c) 2013 kendola - easy eCommerce (http://www.kendola.de/)
- * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
- */
--->
+  Kendola Login With Amazon for Magento
+
+  NOTICE OF LICENSE
+
+  This source file is subject to the Open Software License (OSL 3.0)
+  that is bundled with this package in the file LICENSE.txt.
+  It is also available through the world-wide-web at this URL:
+  http://opensource.org/licenses/osl-3.0.php
+
+  @category   Kendola
+  @package    Kendola_AmazonLogin
+  @author     Oliver Treck, kendola - easy eCommerce <o.treck@kendola.de>
+  @copyright  Copyright (c) 2017 kendola - easy eCommerce (http://www.kendola.de/)
+  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+  -->
 <config>
     <sections>
         <amazonlogin translate="label">
@@ -38,10 +36,9 @@
                     <comment>
                     <![CDATA[
                             <div style="padding:10px;margin-bottom:7px;">
-                            <a href="http://www.kendola.de/" target="_blank"><img src="http://www.kendola.de/kendola-logo.png" align="left" /></a>
-                            This module was developed by <a href="http://www.kendola.de" target="_blank">kendola - easy eCommerce</a> and is still in BETA-Mode.<br />
-                            For docs & examples refer to the <a href="http://github.com/kendola/AmazonLogin" target="_blank">GitHub Page</a>.<br />
-                            If you like it please <a href="#" target="_blank">review</a> or <a href="#" target="_blank">donate</a>.
+                            <a href="http://www.kendola.de/" target="_blank"><img src="http://www.kendola.de/kendola-logo.png" align="left" /></a>This module was developed by <a href="http://www.kendola.de" target="_blank">kendola - easy eCommerce</a>.<br />
+                            For docs & examples refer to the <a href="https://github.com/kendola/AmazonLogin" target="_blank">GitHub Page</a>.<br />
+                            If you like it please <a href="https://github.com/kendola/AmazonLogin" target="_blank">review</a> or <a href="https://github.com/kendola/AmazonLogin#donate" target="_blank">donate</a>.
                             </div><div style="clear:both;"></div>
                     ]]>
                     </comment>

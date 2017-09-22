@@ -1,0 +1,4 @@
+app/code/community/Kendola/AmazonLogin                            app/code/community/Kendola/AmazonLogin
+app/design/frontend/base/default/layout/amazonlogin.xml           app/design/frontend/base/default/layout/amazonlogin.xml
+app/design/frontend/base/default/template/amazonlogin             app/design/frontend/base/default/template/amazonlogin
+app/etc/modules/Kendola_AmazonLogin.xml                           app/etc/modules/Kendola_AmazonLogin.xml
